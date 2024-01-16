@@ -14,9 +14,10 @@ public:
 
     //funzioni get per le variabili private
     int get_numero() const;
+    int get_seme_reale() const;
     string get_seme() const;
     int get_valore() const;
-    int get_seme_reale() const;
+    
 
 };
 #endif
