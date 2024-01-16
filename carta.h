@@ -1,10 +1,9 @@
-#ifndef CARTA_H
-#define CARTA_H
-
+#ifndef CARTE_CARTA_H
+#define CARTE_CARTA_H
+#include <string>
+using namespace std;
 class carta {
 private:
-    //numero da 1 a 10
-    //Bastoni Denari Coppe Spade
     int numero, seme, valore;
 public:
     //custruttore carta
@@ -13,17 +12,11 @@ public:
     //funzione per impostare il valore della carta
     int Valore_Carta(int);
 
-    //funzioni get per tutti le variabili private
+    //funzioni get per le variabili private
     int get_numero() const;
-    int get_seme() const;
+    string get_seme() const;
     int get_valore() const;
+    int get_seme_reale() const;
 
 };
 #endif
-//valori carte
-//2, 4 ,5 ,6 ,7 sono 0 punti
-//1 = 11 punti
-//3 = 10 punti
-//10 = 4 punti
-//9 = 3 punti
-//8 = 2 punti

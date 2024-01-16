@@ -1,5 +1,5 @@
-#ifndef BRISCOLA_BRISCOLA_H
-#define BRISCOLA_BRISCOLA_H
+#ifndef CARTE_BRISCOLA_H
+#define CARTE_BRISCOLA_H
 #include "carta.h"
 #include <vector>
 #include <iostream>
@@ -8,26 +8,30 @@ using namespace std;
 
 class briscola {
 private:
-    static vector<carta> mazzo;
+    //vector per il mazzo
+    vector<carta> mazzo;
+
+    //vector per le mani dei due giocatori
     vector<carta> p1;
     vector<carta> p2;
+
+    //nomi dei due giocatori
+    string nome_p1, nome_p2;
+
+    //variabili per tenere traccia del punteggio dei due giocatori
+    int punti_p1, punti_p2;
+
+    //briscola della partita
+    int seme_briscola;
 public:
-    briscola();
-    static void crea_mazzo();
+    //costruttore
+    briscola(string, string);
+    //dichiarazione delle funzioni
+    void crea_mazzo();
     void mischia();
-    static void test();
+    void estrai_briscola();
+    string dimmi_briscola();
+    void gioca();
+    int test();
 };
-
-
 #endif
-//40 carte
-//creare un mezzo
-//funzione per mischiare
-//3 carte a giocatore
-//la carta in cima al mazzo viene girata e diventa la briscola
-//il seme della carta che è stata girata è la briscola
-//il seme della carta che viene giocata per prima comanda, salvo la briscola
-//se entrambi hanno giocato un liscio(2, 4 ,5 ,6 ,7 ) prende il giocatore di "mano"
-//chi tira una briscola prende, se vengono tirate due briscole vince quella più alta
-//il gioco finisce quando termina il mazzo
-//NB: il turno sta a chi prende
