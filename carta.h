@@ -17,7 +17,5 @@ public:
     int get_seme_reale() const;
     string get_seme() const;
     int get_valore() const;
-    
-
 };
 #endif

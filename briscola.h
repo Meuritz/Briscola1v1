@@ -12,8 +12,8 @@ private:
     vector<carta> mazzo;
 
     //vector per le mani dei due giocatori
-    vector<carta> p1;
-    vector<carta> p2;
+    vector<carta> mano_p1;
+    vector<carta> mano_p2;
 
     //nomi dei due giocatori
     string nome_p1, nome_p2;
@@ -23,6 +23,10 @@ private:
 
     //briscola della partita
     int seme_briscola;
+    
+    //variabile per i turni
+    bool turno;
+
 public:
     //costruttore
     briscola(string, string);
@@ -31,7 +35,9 @@ public:
     void mischia();
     void estrai_briscola();
     string dimmi_briscola();
-    void gioca();
+    void gioca(int, int);
+    bool fine_mazzo();
     int test();
+    bool get_turno();
 };
 #endif
