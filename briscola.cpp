@@ -35,7 +35,7 @@ briscola::briscola(string player1, string player2) {
 //creo il mazzo
 void briscola::crea_mazzo(){
     for (int i = 0; i < 4; ++i) {
-        for (int j = 1; j <= 10; ++j) {
+        for (int j = 0; j <= 10; ++j) {
             auto p = new carta(j, i);
             mazzo.push_back(*p);
         }
@@ -130,7 +130,7 @@ if (g1.get_seme_reale() != g2.get_seme_reale())
         mano_p1.erase(mano_p1.begin() + carta_g1); //come parametro gli passo la posizione della carta usata
         mano_p2.erase(mano_p1.begin() + carta_g1);
     //ripesco la carta , chi ha vinto la mano pesca per primo
-    if (turno = 0)
+    if (turno = 0) //aka se il giocatore 1 ha vinto la mano(turno)
     {
         mano_p1.insert(mano_p1.begin() + carta_g1, mazzo[mazzo.size()]);
         mazzo.pop_back();
@@ -138,7 +138,7 @@ if (g1.get_seme_reale() != g2.get_seme_reale())
         mano_p2.insert(mano_p2.begin() + carta_g2, mazzo[mazzo.size()]);
         mazzo.pop_back();
     }
-    else
+    else//aka se la vinta il giocatore 2
     {
         mano_p2.insert(mano_p2.begin() + carta_g2, mazzo[mazzo.size()]);
         mazzo.pop_back();

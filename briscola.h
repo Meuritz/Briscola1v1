@@ -30,6 +30,12 @@ private:
 public:
     //costruttore
     briscola(string, string);
+    
+    //costruttore per riprendere la partita salvata aka "carica_partita"--> prima fare funzione per mostrare partite salvate
+    /*come parametro non gli do niente voglio fa i salvataggi con tanto di slots*/
+    //void salva_partita("string nome salvataggio")
+    //void mostra_salvataggi
+    //void carica("string nome salvataggio"); NB: riguarda come si mettono a confronto due stringhe
     //dichiarazione delle funzioni
     void crea_mazzo();
     void mischia();
