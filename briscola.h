@@ -25,7 +25,10 @@ private:
     int seme_briscola;
     
     //variabile per i turni
-    bool turno;
+    bool turno = false;
+
+    //
+    int cards_left = 39;
 
 public:
     //costruttore
@@ -43,7 +46,12 @@ public:
     string dimmi_briscola();
     void gioca(int, int);
     bool fine_mazzo();
+    bool fine_mano();
     int test();
     bool get_turno();
+    void stampa_mano_g1();
+    void stampa_mano_g2();
+    int punteggio(int);
+    string stampa_nome(int);
 };
 #endif

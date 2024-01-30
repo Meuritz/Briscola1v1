@@ -32,16 +32,22 @@ int carta::get_numero() const{
 }
 //restituisce il seme della carta sotto forma di string
 string carta::get_seme() const{
-    switch (seme) {
+    string seme;
+    switch (this->seme) {
         case 0:
-            return "Denari";
+            seme = "Denari";
+            break;
         case 1:
-            return "Bastoni";
+            seme = "Bastoni";
+            break;
         case 2:
-            return "Coppe";
+            seme = "Coppe";
+            break;
         case 3:
-            return "Spade";
+            seme = "Spade";
+            break;
     }
+    return seme;
 }
 //restituisce il seme della carta sotto forma di int
 int carta::get_seme_reale() const {
@@ -49,4 +55,8 @@ int carta::get_seme_reale() const {
 }
 int carta::get_valore() const{
     return valore;
+}
+//distruttore per carta
+carta::~carta() {
+
 }
