@@ -8,7 +8,7 @@ private:
 public:
     //custruttore carta
     carta(int, int);
-    //
+    //distruttore
     ~carta();
     //funzione per impostare il valore della carta
     int Valore_Carta(int);

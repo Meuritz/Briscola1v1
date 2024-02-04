@@ -47,6 +47,7 @@ public:
     void gioca(int, int);
     bool fine_mazzo();
     bool fine_mano();
+    void carta_giocata(int);
     int test();
     bool get_turno();
     void stampa_mano_g1();

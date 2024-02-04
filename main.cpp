@@ -10,7 +10,6 @@ void gioca();
 int main() {
 
     briscola sds("dmsmsd", "hsdhsuhd");
-    //sds.test();
     menu();
     return 0;
 }
@@ -67,6 +66,7 @@ briscola Partita(Giocatore_1, Giocatore_2);
                 cout << "Punteggio: " << Partita.punteggio(1) << endl;
                 cout << "Scegli una carta: " << endl;
                 Partita.stampa_mano_g1();
+                cout << "-->";
                 cin >> carta_g1;
             }while(carta_g1 > 3);
 
@@ -78,7 +78,9 @@ briscola Partita(Giocatore_1, Giocatore_2);
                 cout << "Punteggio: " << Partita.punteggio(2) << endl;
                 cout << "Scegli una carta: " << endl;
                 Partita.stampa_mano_g2();
-                cout << "Carta giocata dall'avversario: ";//implementare funzione per capire cosa ha giocato
+                cout << "Carta giocata dall'avversario: "; 
+                Partita.carta_giocata(carta_g1);
+                cout << "-->";
                 cin >> carta_g2;
             }while(carta_g2 > 3);
         }else{
@@ -91,6 +93,7 @@ briscola Partita(Giocatore_1, Giocatore_2);
                 cout << "Punteggio: " << Partita.punteggio(2) << endl;
                 cout << "Scegli una carta: " << endl;
                 Partita.stampa_mano_g2();
+                cout << "-->";
                 cin >> carta_g2;
             }while(carta_g2 > 3);
             //stampo la mano del giocatore 1 e gli faccio scegliere la carta da giocare
@@ -101,7 +104,9 @@ briscola Partita(Giocatore_1, Giocatore_2);
                 cout << "Punteggio: " << Partita.punteggio(1) << endl;
                 cout << "Scegli una carta: " << endl;
                 Partita.stampa_mano_g1();
-                cout << "Carta giocata dall'avversario: ";//implementare funzione per capire cosa ha giocato
+                cout << "Carta giocata dall'avversario: ";
+                Partita.carta_giocata(carta_g2);
+                cout << "-->";
                 cin >> carta_g1;
             }while(carta_g1 > 3);
         }
