@@ -1,6 +1,5 @@
 #include <iostream>
 #include "briscola.h"
-#include <windows.h>
 using namespace std;
 
 void screen_clear();
@@ -26,7 +25,6 @@ void menu(){
     int scelta;
     do{
         cout << "Benvenuto alla Briscola...";
-        Sleep(1000);
         cout << "Fatta MALE!!!" << endl;
         cout << "1)Gioca" << endl << "0)esci dal gioco" << endl;
         cout << "-->";
@@ -35,7 +33,7 @@ void menu(){
             case 1: gioca();
             case 2: exit(0);
             case 0: cout << "Uscita in corso..."; exit(0);
-            default: Sleep(1000); cout << scelta << "Non 'e un opzione valida!!!" ;
+            default: cout << scelta << "Non 'e un opzione valida!!!" ;
         }
     }while(scelta !=1 || scelta !=2);
 }
