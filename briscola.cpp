@@ -159,7 +159,6 @@ void briscola::gioca(int carta_g1, int carta_g2) {
         mano_p1.insert(mano_p1.begin() + carta_g1, mazzo[cards_left]);
         mazzo.pop_back();
         --cards_left;
-
     }
     
 }
@@ -212,7 +211,7 @@ string briscola::stampa_nome(int giocatore){
 }
 //funzione per vedere la carta giocata dall'avversario
 void briscola::carta_giocata(int carta){
-    if(turno = 0){
+    if(turno == 0){
        cout << mano_p1[carta].get_numero() << " di " << mano_p1[carta].get_seme() << " Valore: " << mano_p1[carta].get_valore() << endl;
     }else{
         cout << mano_p2[carta].get_numero() << " di " << mano_p2[carta].get_seme() << " Valore: " << mano_p2[carta].get_valore() << endl;
